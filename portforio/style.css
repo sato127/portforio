@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.5em;
+  font-family: 'Marko One', serif;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: lighter;
+  color: #fff;
+  background: #1d273d;
+}
+img,iframe{
+  vertical-align: bottom;
+}
+ul{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: #ab987a;
+}
+svg {
+  height: 55vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  transform-origin: center;
+  z-index: -1
+}
+.fixed ul{
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+.fixed ul li{
+  padding: 0 10px;
+}
+
+#container{
+  width: 100%;
+}
+h2{
+  text-align: center;
+  padding: 15px 0;
+}
+p,td{
+  line-height: 2em;
+}
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+.profile img{
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+  object-fit: cover;
+  padding: 20px 20px 20px 0;
+}
+.profile ul{
+  max-width: 400px;
+}
+.profile h3{
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+section{
+  position: relative;
+  overflow: hidden;
+}
+section:nth-child(1):before,section:nth-child(3):before {
+  content: '';
+  position: absolute;
+  top: 6%;
+  left: 0;
+  width: 120%;
+  height: 50%;
+  margin: 0 -10%;
+  background: #fff;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  z-index: -1;
+}
+section:nth-child(1):after,section:nth-child(3):after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 120%;
+  height: 40%;
+  margin: 0 -10%;
+  background: #fff;
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  z-index: -1;
+}
+.inner{
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 180px 0;
+  color: #000;
+}
+section:nth-child(even){
+  padding: 0;
+  margin-top: -40px;
+}
+section:nth-child(even) .inner{
+  padding: 0;
+  color: #fff;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 60px;
+  flex-wrap: wrap;
+}
+.flex img{
+  width: 400px;
+  height: auto;
+}
+.flex a{
+  color: #ab987a;
+}
+.flex a:hover{
+  color: #f99807;
+  text-decoration: underline;
+  transition: all .5s 0s ease;
+}
+.text{
+  width: 450px;
+  height: auto;
+}
+.flex:nth-child(odd) img{
+  order: 2;
+}
+.flex:nth-child(odd) .text{
+  order: 1;
+}
+
+#design{
+  padding-bottom: 80px;
+}
+.garally{
+  padding: 40px 0 50px 0;
+}
+.garally ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.garally li{
+  width: 20%;
+  height: 150px;
+  padding: 1px;
+  box-sizing: border-box;
+}
+.garally li:hover{
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
+}
+.garally a{
+  opacity: .75;
+}
+.garally a:hover{
+  opacity: 1;
+  transition: all .8s ease;
+}
+
+.garally img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.skill_box{
+  padding-top: 30px;
+}
+th{
+  text-align: left;
+}
+td{
+  padding: 15px;
+}
+footer{
+  text-align: center;
+  width: 960px;
+  margin: 80px auto 40px;
+}
+/*----responsive---*/
+@media(max-width:768px){
+  svg {
+    height: 60vh;
+  }
+  .inner{
+    width: 90%;
+  }
+  .flex img{
+    width: 100% !important;
+  }
+  .flex:nth-child(odd) img{
+    order: 1;
+  }
+  .flex:nth-child(odd) .text{
+    order: 2;
+  }
+  .text{
+    width: 100%;
+  }
+
+  .garally li{
+    width: 50%;
+  }
+  section:nth-child(1):after,section:nth-child(3):after{
+    bottom: 10%;
+  }
+  table{
+    width: 100%;
+  }
+  th,td{
+    display: block;
+    width: 100%;
+  }
+  td{
+    padding: 15px 0 30px 0;
+  }
+  footer{
+    width: 80%;
+  }
+}
